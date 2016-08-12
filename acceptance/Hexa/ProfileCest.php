@@ -57,8 +57,8 @@ class ProfileCest extends Profile
     {
         $this->changeProfileData($I, 'Test', 'Test', 'test', 'test@mail.com',
             '123456', '123456');
-        $I->canSee('This login already exist');
-        $I->canSee('This email already exist');
+        $I->canSee('The login is not unique');
+        $I->canSee('The email is not unique');
     }
 
     /**
